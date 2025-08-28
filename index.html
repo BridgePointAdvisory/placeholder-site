@@ -12,24 +12,59 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       color: #cccccc;
       font-family: sans-serif;
       text-align: center;
+      padding: 2em;
     }
     img {
       max-width: 90%;
       height: auto;
+      margin-bottom: 2em;
     }
     .coming-soon {
-      margin-top: 20px;
+      margin-bottom: 2em;
       font-size: 1.2em;
       color: #aaaaaa;
+    }
+    form {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea, button {
+      margin-bottom: 1em;
+      padding: 0.75em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    input, textarea {
+      background-color: #2a2a2a;
+      color: #ffffff;
+    }
+    button {
+      background-color: #00bfa6;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #009c87;
     }
   </style>
 </head>
 <body>
   <img src="image.png" alt="Bridgepoint Advisory Group">
   <div class="coming-soon">Coming Soon</div>
+  <form action="https://formsubmit.co/alan@bridgepointag.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </body>
 </html>
